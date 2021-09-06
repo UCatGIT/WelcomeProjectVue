@@ -11,7 +11,7 @@ export default {
   name: 'App',
   data() {
     return {
-      title: "Ich will Wochenende!!!"
+      title: "Ich freue mich aufs Wochenende!!!"
 
 };
 }
