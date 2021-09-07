@@ -100,7 +100,7 @@ console.log(response);
 
 body {
   margin: 8px;
-  background-color: #E5E5E5;
+  background-color:#E8EFF4;
 }
 
 #app {
@@ -136,7 +136,7 @@ height: 50px;
 .site-title {
   font-size: 62px;
   font-weight: 900;
-  margin: 80px;
+  margin: 80px;  
 }
 
 h1 {
@@ -159,6 +159,7 @@ h3 {
   font-size: 62px;
   font-weight: 500;
   margin: 80px;
+  padding: 0px;
 
 }
 
