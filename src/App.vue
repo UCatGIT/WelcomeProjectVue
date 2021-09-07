@@ -26,7 +26,7 @@
            <span class="entry-daytime">08:30 Uhr, 07.09.2021</span>
            <br>
            <h3 class="entry-title">Tugce Nur returns to the office</h3>
-            <span class="entry-description">We will contnue working on this app together on Tuesday!</span>
+            <span class="entry-description">We will continue working on this app together on Tuesday!</span>
          <br>
          </li>
          <li class="entry-item">
@@ -135,9 +135,7 @@ footer div {
   flex-grow: 1;
 }
 
-.img1 {
-  height: ;
-}
+
 
 
 .site-title {
