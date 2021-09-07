@@ -16,7 +16,7 @@
       <div class="ersterAbschnitt"> 
        <ul class="entry-list"> 
          <li v-for="entry in filteredEntries" :key="entry.id" class="entry-item">
-           <span class="entry-daytime">{{entry[0] }} Uhr, {{ entry[1].replaceAll("/", "."")}}</span>
+           <span class="entry-daytime">{{entry[0] }} Uhr, {{ entry[1].replaceAll("/", ".")}}</span>
            <br>
            <h3 class="entry-title">Opportunity Zürich</h3>
             <span class="entry-description">Trainees & Team will return from their Weekend</span>
@@ -84,7 +84,7 @@ console.log(response);
       const date = `${today.getDate()}.${today.getMonth()+1}.${today.getFullYear()}`;
       this.currentDate = date;
     },
-    refreshData() {ä
+    refreshData() {
       this.getData();
       this.updateCurrentDate();
     },
