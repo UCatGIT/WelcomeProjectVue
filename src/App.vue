@@ -2,19 +2,12 @@
   <div id="app">
     {{ title }}
     
-  <div class="site-title">
-    <h1>Welcome to Opportunity</h1>
-    <span class="site-description">Dienstag {{currentDate}}</span>
+  
+    <h1 class="site-title">Welcome to Opportunity</h1>
+      <span class="site-description">{{currentDate}}</span>
 
-      <div>
-        
-        
-      </div>
-
-  </div>
     <main>
-      <div class="ersterAbschnitt"> 
-       <ul class="entry-list"> 
+        <ul class="entry-list"> 
          <li v-for="entry in filteredEntries" :key="entry.id" class="entry-item">
            <span class="entry-daytime">{{entry[0] }} Uhr, {{ entry[1].replaceAll("/", ".")}}</span>
            <br>
@@ -36,15 +29,14 @@
             <span class="entry-description">Opportunity goes to Limmatplatz and visits the web agnecy Panter</span>
          <br>
          </li>
-       </ul>
-      </div>
+       </ul>      
     </main>
 
 
     <footer>
-      <div> <img src="./assets/STZH_SEB_Logo.png" alt="Logo1" width="230px" height="44px"></div>
-      <div> <img src="./assets/Opportunity.png" alt="Logo2" width="296px" height="55px"></div>
-      <div><img src="./assets/SAG_Logo_De.png" alt="Logo2" width="273px" height="52px"></div>
+      <div> <img class="img" src="./assets/STZH_SEB_Logo.png" alt="Logo1" ></div>
+      <div> <img class="img" src="./assets/Opportunity.png" alt="Logo2" ></div>
+      <div><img class="img" src="./assets/SAG_Logo_De.png" alt="Logo3" ></div>
     </footer>
    
 
@@ -59,7 +51,7 @@ export default {
   name: 'App',
   data() {
     return {
-      title: "Welcome screen Urs",
+      title: "",
       currentDate: "",
       gsheet_url: "https://sheets.googleapis.com/v4/spreadsheets/1qLZJwuNv3QmwGhSj1wZZbuXNOkDKN-Ha7fo0Ca_uVVU/values:batchGet?ranges=A1%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyBesotaNgSaTUIhrSKjEaExdi-ksKInhoE",
       entries: [],
@@ -107,6 +99,7 @@ console.log(response);
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap');
 
 body {
+  margin: 8px;
   background-color: #E5E5E5;
 }
 
@@ -121,7 +114,7 @@ body {
 footer {
   background-color:#fff;
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: space-between;
   box-sizing: border-box;
   position: fixed;
@@ -135,19 +128,21 @@ footer div {
   flex-grow: 1;
 }
 
+.img {
+height: 50px;
+}
 
-
-
+/*Welcome to Opportunity*/
 .site-title {
   font-size: 62px;
   font-weight: 900;
-  margin: 80px 0 20px 0;
+  margin: 80px;
 }
 
 h1 {
   font-size: 62px;
   font-weight: 900;
-  margin: 80px 0 20px 0;
+  margin: 80px;
   color: #323d4a;
 }
 
@@ -158,41 +153,37 @@ h3 {
   
 }
 
+/*Datum*/
 .site-description {
   color: #9aa7b1;
   font-size: 62px;
   font-weight: 500;
-  margin: 0;
+  margin: 80px;
 
 }
 
-
-
-
+/*Ausflug oder Anlass*/
 .entry-title {
   font-size: inherit;
+  margin: 0px;
+  font-weight: 900;
 }
 
-
-.entry-list {
-  text-align: left;
- 
-  color: #ffbfab;
-}
-
+/*Datum Uhrzeit der Veranstaltung*/
 .entry-daytime {
   color: #eb5e00;
   font-weight: 900;
   
 }
 
-.entry-item {
+/*3 Info Boxen*/
+.entry-item {  
 background-color: #0F05A0;
+color: #ffbfab;
 width: 80%;
 padding: 35px 40px;
-margin: 40px 0;
+margin: 40px;
 font-size: 28px;
-line-height: 1.3;
 list-style: none;
 }
 
