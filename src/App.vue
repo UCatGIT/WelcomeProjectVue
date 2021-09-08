@@ -11,8 +11,8 @@
          <li v-for="entry in filteredEntries" :key="entry.id" class="entry-item">
            <span class="entry-daytime">{{ entry[0] }} Uhr, {{ entry[1].replaceAll("/", ".")}}</span>
            <br>
-           <h3 class="entry-title">{{ entry[3] }}</h3>
-            <span class="entry-description">{{ entry[4] }}</span>
+           <h3 class="entry-title">{{ entry[2] }}</h3>
+            <span class="entry-description">{{ entry[3] }}</span>
          <br>
          </li>
          <!-- <li class="entry-item">
