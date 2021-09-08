@@ -9,13 +9,13 @@
     <main>
         <ul class="entry-list"> 
          <li v-for="entry in filteredEntries" :key="entry.id" class="entry-item">
-           <span class="entry-daytime">{{entry[0] }} Uhr, {{ entry[1].replaceAll("/", ".")}}</span>
+           <span class="entry-daytime">{{ entry[0] }} Uhr, {{ entry[1].replaceAll("/", ".")}}</span>
            <br>
-           <h3 class="entry-title">Opportunity Zürich</h3>
-            <span class="entry-description">Trainees & Team will return from their Weekend</span>
+           <h3 class="entry-title">{{ entry[3] }}</h3>
+            <span class="entry-description">{{ entry[4] }}</span>
          <br>
          </li>
-         <li class="entry-item">
+         <!-- <li class="entry-item">
            <span class="entry-daytime">08:30 Uhr, 07.09.2021</span>
            <br>
            <h3 class="entry-title">Tugce Nur returns to the office</h3>
@@ -28,7 +28,7 @@
            <h3 class="entry-title">Firmenausflug Panter</h3>
             <span class="entry-description">Opportunity goes to Limmatplatz and visits the web agnecy Panter, Yeah!</span>
          <br>
-         </li>
+         </li> -->
        </ul>      
     </main>
 
@@ -53,7 +53,7 @@ export default {
     return {
       title: "",
       currentDate: "",
-      gsheet_url: "https://sheets.googleapis.com/v4/spreadsheets/1qLZJwuNv3QmwGhSj1wZZbuXNOkDKN-Ha7fo0Ca_uVVU/values:batchGet?ranges=A1%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyBesotaNgSaTUIhrSKjEaExdi-ksKInhoE",
+      gsheet_url: "https://sheets.googleapis.com/v4/spreadsheets/1sFLB-pk6077Zw1wNz2gbJCawqNP1DvS1RzVyJeQ9GcI/values:batchGet?ranges=A1%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyDQDbBXf8nKtHNyIJ8uElPP9kBTWqbboTY",
       entries: [],
     };
   },
