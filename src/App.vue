@@ -53,22 +53,20 @@ export default {
     return {
       title: "",
       currentDate: "",
+      // gsheet_url: "https://sheets.googleapis.com/v4/spreadsheets/1qLZJwuNv3QmwGhSj1wZZbuXNOkDKN-Ha7fo0Ca_uVVU/values:batchGet?ranges=A1%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyBesotaNgSaTUIhrSKjEaExdi-ksKInhoE",
       gsheet_url: "https://sheets.googleapis.com/v4/spreadsheets/1sFLB-pk6077Zw1wNz2gbJCawqNP1DvS1RzVyJeQ9GcI/values:batchGet?ranges=A1%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyDQDbBXf8nKtHNyIJ8uElPP9kBTWqbboTY",
       entries: [],
     };
   },
   computed: {
     filteredEntries() {
-      return[...this.entries].slice(1);
+      return [...this.entries].slice(1);
     },
-  
   },
   methods: {
     getData() {
       axios.get(this.gsheet_url).then((response) => {
-        this.entries =response.data
-console.log(response);
-
+        this.entries = response.data.valueRanges[0].values
       })
     },
     updateCurrentDate() {
