@@ -26,7 +26,7 @@
            <span class="entry-daytime">15:00 Uhr, 08.09.2021</span>
            <br>
            <h3 class="entry-title">Firmenausflug Panter</h3>
-            <span class="entry-description">Opportunity goes to Limmatplatz and visits the web agnecy Panter</span>
+            <span class="entry-description">Opportunity goes to Limmatplatz and visits the web agnecy Panter, Yeah!</span>
          <br>
          </li>
        </ul>      
