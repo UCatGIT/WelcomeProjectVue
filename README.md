@@ -1,4 +1,4 @@
-# tugce_nur_vue
+# UC test manual
 
 ## Project setup
 ```
